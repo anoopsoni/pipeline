@@ -4,10 +4,13 @@ node {
     stage ('Checkout From Github')
     {
         echo "Checkout fromm Source Code repository"
+        echo "This is running ${env.BUILD_ID} on ${env.JENKINS_URL}"
     }
     stage ('Build')
     {
         echo "Build is in progress"
+        def username = 'jenkins'
+        echo "Hello my name is ${username}"
     }
     stage ('Deployment')
     {
